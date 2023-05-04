@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/admin">Admin</a></li>
+      <li (click)="logout()">Logout</li>
+    </ul>
+  </nav>
+</header>
+<div *ngFor="let product of products" class="product-details">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product._id }}</p>
+    <p  class="price">Price: {{ product.price }}</p>
+    <p class="description">Description: {{ product.description }}</p>
+    <p><a routerLink="/product/{{ product._id }}">Link to product page</a></p>
+  </div>
